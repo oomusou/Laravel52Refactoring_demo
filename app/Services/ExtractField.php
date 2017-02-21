@@ -4,17 +4,15 @@ namespace App\Services;
 
 class ExtractField
 {
+    private $name = 'Hello World';
+
     public function print1()
     {
-        $name = 'Hello World';
-
-        echo($name);
+        echo($this->name);
     }
 
     public function print2()
     {
-        $name = 'Hello World';
-
-        echo($name);
+        echo($this->name);
     }
 }
