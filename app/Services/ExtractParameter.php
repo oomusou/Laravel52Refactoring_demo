@@ -4,9 +4,9 @@ namespace App\Services;
 
 class ExtractParameter
 {
-    public function Calculate(int $i)
+    public function Calculate(int $i, int $c)
     {
-        while ($i < 10) {
+        while ($i < $c) {
             $i = $i + 1;
             return $i;
         };
@@ -15,7 +15,7 @@ class ExtractParameter
     public function DisplaySum()
     {
         $a = 1;
-        $result = $this->Calculate($a);
+        $result = $this->Calculate($a, 10);
 
         echo "The final result is " . $result;
     }
