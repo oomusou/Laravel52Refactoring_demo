@@ -6,10 +6,10 @@ class RenameMethod
 {
     public function print()
     {
-        $this->printOutline();
+        $this->printDetail();
     }
 
-    public function printOutline()
+    public function printDetail()
     {
         echo('Detail');
     }
