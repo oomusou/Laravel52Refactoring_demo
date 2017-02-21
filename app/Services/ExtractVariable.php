@@ -6,7 +6,8 @@ class ExtractVariable
 {
     public function Calculate(int $i)
     {
-        while ($i < 10) {
+        $c = 10;
+        while ($i < $c) {
             $i = $i + 1;
             return $i;
         };
