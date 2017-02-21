@@ -9,6 +9,14 @@ class ExtractMethod
         $this->printBanner();
 
         // print details
+        $this->printDetails($name);
+    }
+
+    /**
+     * @param string $name
+     */
+    private function printDetails(string $name)
+    {
         print("name:  " . $name);
         print("amount " . $this->getOutstanding());
     }
