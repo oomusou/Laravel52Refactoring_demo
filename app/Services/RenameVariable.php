@@ -2,13 +2,12 @@
 
 namespace App\Services;
 
-
 class RenameVariable
 {
     public function print()
     {
-        $address = 'Sam';
+        $name = 'Sam';
 
-        echo($address);
+        echo($name);
     }
 }
