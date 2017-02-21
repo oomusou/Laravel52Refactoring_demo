@@ -6,6 +6,6 @@ class MoveStaticMember0
 {
     public function print()
     {
-        MoveStaticMember1::print();
+        MoveStaticMember2::print();
     }
 }
