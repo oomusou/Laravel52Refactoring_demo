@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-class RenameClass
+class MyRenameClass
 {
     public function print()
     {
@@ -10,5 +10,5 @@ class RenameClass
     }
 }
 
-$obj = new RenameClass();
+$obj = new MyRenameClass();
 $obj->print();
