@@ -10,63 +10,20 @@ use Illuminate\Database\Eloquent\Collection;
 
 class PostService
 {
-    /** @var  PostRepository */
-    private $postRepository;
+    /** @var SMSService */
+    private $SMSService;
 
     /**
      * PostService constructor.
-     * @param PostRepository $postRepository
+     * @param SMSService $SMSService
      */
-    public function __construct(PostRepository $postRepository)
+    public function __construct(SMSService $SMSService)
     {
-        $this->postRepository = $postRepository;
+        $this->SMSService = $SMSService;
     }
 
-    /**
-     * 顯示所有文章
-     * @return Collection
-     */
-    public function showAllPosts() : Collection
+    public function showMessage()
     {
-        return $this->postRepository->getAllPosts();
-    }
-
-    /**
-     * 顯示 id 文章的 title
-     * @param int $id
-     * @param string $default 若找不到資料，顯示預設值
-     * @return string
-     */
-    public function showTitle(int $id, string $default) : string
-    {
-        return $this->postRepository->getTitle($id, $default);
-    }
-
-    /**
-     * 顯示所有文章的 title
-     */
-    public function showTitlesOfAllPostsByArray() : array
-    {
-        $posts = $this->postRepository->getAllPosts();
-
-        $titles = [];
-
-        foreach ($posts as $post) {
-            $titles[] = $post->title;
-        }
-
-        return $titles;
-    }
-
-    /**
-     * 顯示所有文章的 title
-     */
-    public function showTitlesOfAllPostsByCollection() : Collection
-    {
-        return $this->postRepository
-            ->getAllPosts()
-            ->map(function (Post $post) {
-                return $post->title;
-            });
+        return $this->SMSService->sendMessage();
     }
 }
