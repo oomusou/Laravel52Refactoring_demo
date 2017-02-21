@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-class SMSService
+class SMSService implements Printable, Sendable
 {
     public function printMessage()
     {

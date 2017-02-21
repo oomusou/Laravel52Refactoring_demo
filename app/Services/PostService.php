@@ -10,14 +10,14 @@ use Illuminate\Database\Eloquent\Collection;
 
 class PostService
 {
-    /** @var SMSService */
+    /** @var Sendable */
     private $SMSService;
 
     /**
      * PostService constructor.
-     * @param SMSService $SMSService
+     * @param Sendable $SMSService
      */
-    public function __construct(SMSService $SMSService)
+    public function __construct(Sendable $SMSService)
     {
         $this->SMSService = $SMSService;
     }
