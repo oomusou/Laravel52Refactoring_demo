@@ -11,12 +11,13 @@ class OrderService
      */
     public function calculatePrice(string $type, int $days): int
     {
-        if ($type == 'Regular') {
-            return ($days - 7) * 10;
-        } elseif ($type == 'NewRelease') {
-            return ($days - 3) * 30;
-        } elseif ($type == 'Children') {
-            return ($days - 7) * 10;
+        switch ($type) {
+            case 'Regular':
+                return ($days - 7) * 10;
+            case 'NewRelease':
+                return ($days - 3) * 30;
+            case 'Children':
+                return ($days - 7) * 10;
         }
     }
 }
