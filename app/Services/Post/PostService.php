@@ -6,10 +6,10 @@ namespace App\Services\Post;
 
 use App\Services\Sendable;
 
-class PostService
+class PostService extends AbstractPostService
 {
     /** @var Sendable */
-    private $SMSService;
+    protected $SMSService;
 
     /**
      * PostService constructor.
