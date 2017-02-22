@@ -4,10 +4,6 @@ declare(strict_types = 1);
 
 namespace App\Services;
 
-use App\Post;
-use App\Repositories\PostRepository;
-use Illuminate\Database\Eloquent\Collection;
-
 class PostService
 {
     /** @var Sendable */
