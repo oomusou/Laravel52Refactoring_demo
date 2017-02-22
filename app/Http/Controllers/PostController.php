@@ -4,17 +4,17 @@ declare(strict_types = 1);
 
 namespace App\Http\Controllers;
 
-use App\Services\PostService;
+use App\Services\Post\PostService;
 use View;
 
 class PostController extends Controller
 {
-    /** @var PostService */
+    /** @var \App\Services\Post\PostService */
     private $postService;
 
     /**
      * PostController constructor.
-     * @param PostService $postService
+     * @param \App\Services\Post\PostService $postService
      */
     public function __construct(PostService $postService)
     {

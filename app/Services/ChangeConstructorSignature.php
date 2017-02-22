@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Services\Post\PostService;
+
 class ChangeConstructorSignature
 {
     /** @var PostService */

@@ -1,11 +1,11 @@
 <?php
 
-use App\Services\PostService;
+use App\Services\Post\PostService;
 use App\Services\SMSService;
 
 class PostServiceIntegrationTest extends TestCase
 {
-    /** @var PostService */
+    /** @var \App\Services\Post\PostService */
     protected $target;
 
     protected function setUp()

@@ -4,13 +4,13 @@ declare(strict_types = 1);
 
 use App\Post;
 use App\Repositories\PostRepository;
-use App\Services\PostService;
+use App\Services\Post\PostService;
 use Illuminate\Database\Eloquent\Collection;
 use Mockery\Mock;
 
 class PostServiceUnitTest extends TestCase
 {
-    /** @var PostService $target */
+    /** @var \App\Services\Post\PostService $target */
     protected $target;
 
     /** @var Mock */
